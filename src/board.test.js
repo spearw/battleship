@@ -48,13 +48,13 @@ it('should be able to place multi-square ships vertically', function () {
     ])
 });
 
-it('should return error if placeship is used overlapping another ship', function () {
-    expect(() => {board3.placeShip(0,0, patrolBoatTest, false)
-        .placeShip(0,0,patrolBoatTest)}).toThrow()
+it('should return false if placeship is used overlapping another ship', function () {
+    expect(board3.placeShip(0,0, patrolBoatTest, false)
+        .placeShip(0,0,patrolBoatTest)).toBe(false)
 });
 
-it('should return error if placeship would place a ship off the board ', function () {
-    expect(() => {board3.placeShip(2,0, patrolBoatTest)}).toThrow()
+it('should return false if placeship is used off the board', function () {
+   expect(board3.placeShip(2,2,patrolBoatTest)).toBe(false)
 });
 
 describe('hit detection', () =>{

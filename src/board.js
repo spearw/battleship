@@ -12,12 +12,10 @@ const createBoard = (size) => ({
 
                 //overlap
                 if (this.matrix[y][x+i] != null) {
-                  throw "space occupied"
                   return false
                 }
                 //off the board
                 else if(y >= matrix.length || x+i >= matrix[y].length ){
-                    throw ship.name + " off the board"
                     return false
                 }
 
@@ -29,12 +27,10 @@ const createBoard = (size) => ({
             for (i=0;i<ship.length;i++){
 
                 if(y+i >= matrix.length || x >= matrix[y].length ){
-                    throw "off the board"
                     return false
                 }
                 //overlap
                 else if (this.matrix[y+i][x] != null){
-                  throw "space occupied"
                   return false
                 }
 
