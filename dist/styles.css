@@ -26,6 +26,14 @@ tr * {
     display: flex;
 }
 
+.space-around{
+    justify-content: space-around;
+}
+
+button{
+    margin: 1rem;
+}
+
 table#board2 *:hover {
     background-color: azure;
     cursor: pointer;

@@ -60,11 +60,11 @@ const createBoard = (size) => ({
 
             this.matrix[y][x].hit(0)
             this.matrix[y][x] = this.matrix[y][x]
-            return this
+            return true
         }
         else{
             this.matrix[y][x] = true
-            return this
+            return false
         }
 
     },

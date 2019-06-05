@@ -2,9 +2,14 @@ const createPlayer = (ai=false, name="player") => ({
 
     ai: ai,
     name: name,
-    needToSelectSquare: true,
+    justSunk: false,
+    justHit: false,
     attacks: [],
     attackBoard(x,y, board){
+        console.log("attacking",x,y)
+        if (x<0 || y<0){
+            return false
+        }
         if (x >= board.size || y >= board.size){
             //shot off the board
             return false

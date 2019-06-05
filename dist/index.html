@@ -18,9 +18,15 @@
         <div>Battleship</div>
 
     </header>
-    <div class="navbar navbar-expand-lg navbar-light bg-light justify-content-center bottom-margin">
-        <span id="turnIndicator">Hit!</span>
-        <span id="location">G9</span>
+    <div class="navbar navbar-expand-lg navbar-light bg-light bottom-margin space-around">
+        <div class="indicator">
+            <span id="aiOutcome">Your Board</span>
+            <span id="aiLocation"></span>
+        </div>
+        <div class="indicator">
+            <span id="playerOutcome">AI Board</span>
+            <span id="playerLocation"></span>
+        </div>
     </div>
 
 
@@ -39,8 +45,8 @@
 
     <footer class = "footer">
         <div class = "container">
-            <span class="text-muted"><button id = "newgame">New Game</button></span>
-            <span class="text-muted"><button id = "ai" style = "display:none;">Play Vs. AI</button></span>
+            <span class="text-muted"><button id = "newgame">Random New Game</button></span>
+            <span class="text-muted" style="display:none;"><button id = "ai">Custom Game</button></span>
         </div>
     </footer>
 

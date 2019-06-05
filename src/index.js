@@ -3,7 +3,7 @@ const ship = require('./ship')
 const createPlayer = require('./player')
 const displayController = require('./displayController')
 
-function newGame(player1ai=false, player2ai=true, player1name='player', player2name='AI', boardSize=10){
+function newGame(customGame=false, player1ai=false, player2ai=true, player1name='player', player2name='AI', boardSize=10){
     console.log('creating players...')
     let player1 = createPlayer(player1ai, player1name)
     let player2 = createPlayer(player2ai, player2name)
@@ -20,8 +20,12 @@ function newGame(player1ai=false, player2ai=true, player1name='player', player2n
     let destroyer1 = ship.createShip(ship.destroyer)
     let patrolBoat1 = ship.createShip(ship.patrolBoat)
     console.log('placing ships...')
-    //fixedPlaceShips(player1board,carrier1,battleship1,cruiser1,destroyer1,patrolBoat1)
-    randPlaceShips(player1board,carrier1,battleship1,cruiser1,destroyer1,patrolBoat1)
+    if (customGame){
+        fixedPlaceShips(player1board,carrier1,battleship1,cruiser1,destroyer1,patrolBoat1)
+    }
+    else{
+        randPlaceShips(player1board,carrier1,battleship1,cruiser1,destroyer1,patrolBoat1)
+    }
 
     //player2 ships
     let carrier2 = ship.createShip(ship.carrier)
@@ -29,8 +33,12 @@ function newGame(player1ai=false, player2ai=true, player1name='player', player2n
     let cruiser2 = ship.createShip(ship.cruiser)
     let destroyer2 = ship.createShip(ship.destroyer)
     let patrolBoat2 = ship.createShip(ship.patrolBoat)
-    //fixedPlaceShips(player2board,carrier2,battleship2,cruiser2,destroyer2,patrolBoat2)
-    randPlaceShips(player2board,carrier2,battleship2,cruiser2,destroyer2,patrolBoat2)
+    if (customGame){
+        fixedPlaceShips(player2board,carrier2,battleship2,cruiser2,destroyer2,patrolBoat2)
+    }
+    else{
+        randPlaceShips(player2board,carrier2,battleship2,cruiser2,destroyer2,patrolBoat2)
+    }
     console.log('showing boards...')
 
     let board1 = document.getElementById("board1")
