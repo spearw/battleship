@@ -41,6 +41,11 @@ function newGame(customGame=false, player1ai=false, player2ai=true, player1name=
     }
     console.log('showing boards...')
 
+    document.getElementById("aiOutcome").innerHTML = "Your Board"
+    document.getElementById("aiLocation").innerHTML = ""
+    document.getElementById("playerOutcome").innerHTML = "AI Board"
+    document.getElementById("playerLocation").innerHTML = ""
+
     let board1 = document.getElementById("board1")
     let board2 = document.getElementById("board2")
 

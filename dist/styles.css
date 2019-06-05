@@ -1,11 +1,14 @@
 tr * {
     display: inline-table;
     width: 2rem;
-    border: 1px solid lightblue;
-    background-color: lightcyan;
     height: 2rem;
     font-size: 0.75rem;
     text-align: center;
+}
+
+tr td{
+    border: 1px solid lightblue;
+    background-color: lightcyan;
 }
 
 .boardWrapper{
@@ -34,12 +37,11 @@ button{
     margin: 1rem;
 }
 
-table#board2 *:hover {
+table#board2 td:hover {
     background-color: azure;
     cursor: pointer;
 }
 
 table{
-    border: 1px solid black;
     margin: 1rem;
 }
