@@ -1,0 +1,37 @@
+tr * {
+    display: inline-table;
+    width: 2rem;
+    border: 1px solid lightblue;
+    background-color: lightcyan;
+    height: 2rem;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.boardWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.destroyed{
+    color:darkred;
+    font-weight: bold;
+}
+
+.container{
+    justify-content: center;
+    display: flex;
+}
+
+table#board2 *:hover {
+    background-color: azure;
+    cursor: pointer;
+}
+
+table{
+    border: 1px solid black;
+    margin: 1rem;
+}
